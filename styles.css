@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: system-ui, sans-serif;
+}
+
+nav {
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav button {
+    background: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 70px);
+}
+
+.task-col {
+    flex: 1;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-col.hover {
+    border: 2px dashed #fff;
+}
+
+.heading {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.task {
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: grab;
+}
+
+.task button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal .bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.modal .center {
+    position: relative;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 10;
+}
+
+.modal input,
+.modal textarea {
+    background: #2a2a2a;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal button {
+    background: #2a2a2a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
